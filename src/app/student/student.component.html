@@ -1,0 +1,37 @@
+
+
+<h2>Évaluation du projet</h2>
+<form (ngSubmit)="onFormSubmit()">
+  <table>
+    <tr>
+      <th>Critères d'évaluation pour le projet</th>
+      <th>Résultats/Objectifs</th>
+      <th>Compétences</th>
+      <th>Implic. - Motivation Efficacité</th>
+      <th>Communication (écrite, orale, partage des informations)</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>En lien avec les objectifs SMART (Spécifique, Mesurable, Accessible, Réaliste, Timé) du cahier des charges, ou ceux définis à chaque itération …</td>
+      <td>Techniques (logiciels, langages, matériels ...) et non techniques (management, négociation, recherche d'informations, veille technologique …</td>
+      <td>Autonomie, responsabilisation, force de proposition, investissement dans l'équipe, présence au travail, respect des horaires, partage de connaissances, intégration dans l'équipe …</td>
+      <td>Contribution aux apports et aux échanges d'informations, accompagne l'écoute, la compréhension, l'appropriation des données Compte-rendu, livrables, plannings, documentation, poster, publication … Réunion, entretiens, soutenance orale, présentation … Mails, téléphone, visio-conférence, confcall, facebook, campus numérique, Tumblr, Facebook, vidéo …</td>
+    </tr>
+    <tr>
+      <td>Coefficient</td>
+      <td>{{ coeffResultat }}</td>
+      <td>{{ coeffCompetence }}</td>
+      <td>{{ coeffImplication }}</td>
+      <td>{{ coeffCommunication }}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="number" name="resultat" min="0" max="20" required></td>
+      <td><input type="number" name="competence" min="0" max="20" required></td>
+      <td><input type="number" name="implication" min="0" max="20" required></td>
+      <td><input type="number" name="communication" min="0" max="20" required></td>
+    </tr>
+  </table>
+  <button type="submit">Enregistrer</button>
+  <button type="button" (click)="goBack()">Retour</button>
+</form>
